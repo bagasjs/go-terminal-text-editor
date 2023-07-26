@@ -1,6 +1,10 @@
 package main
 
+import (
+	"github.com/bagasjs/flux/core"
+)
+
 func main() {
-    editor := NewEditor()
+    editor := core.NewDefaultFlux()
     editor.Start()
 }
