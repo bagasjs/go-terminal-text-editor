@@ -17,6 +17,10 @@ func NewBuffer(cursor *Vec2) *Buffer {
     }
 }
 
+func (b* Buffer) GetCurrentLine() string {
+    return b.lines[b.Cursor.Y]
+}
+
 func (b *Buffer) InsertEmptyLine(index uint64) {
     b.lines = append(b.lines, "")
     bufferLinesAmount := len(b.lines)

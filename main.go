@@ -1,10 +1,13 @@
 package main
 
 import (
+	"flag"
+
 	"github.com/bagasjs/flux/core"
 )
 
 func main() {
     editor := core.NewDefaultFlux()
-    editor.Start()
+    file := flag.String("file", "", "File to edit")
+    editor.Start(*file)
 }
